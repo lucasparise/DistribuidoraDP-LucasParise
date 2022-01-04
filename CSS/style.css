@@ -1,0 +1,455 @@
+/* -------------estilos generales------------- */
+*{
+    box-sizing: border-box;
+}
+
+a {
+text-decoration: none;
+}
+
+.subrayado{
+    text-decoration: underline;
+}
+
+/* estilo nav */
+
+.boxHeader{
+    grid-area: header;
+    background-color: lightskyblue;
+    display: flex;
+	position: sticky;
+	top: 0px;
+    border-bottom: solid darkblue 1px;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+}
+
+.boxHeader img {
+    margin-left: 50%;
+	padding: 5%;
+    height: 100%;
+}
+
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    width: 100%;
+    
+}
+
+.menu .estiloLista{
+    text-align: right;
+}
+
+.itemMenu{
+    font-size: 16px;
+    display: inline-block;
+    padding: 1%;
+}
+
+/* estilo pie de pagina */
+
+#pieDePagina{
+    grid-area: footer;
+    background-color: rgb(62, 118, 202);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+
+#pieDePagina div{
+    padding-top: 1%;
+    width: 33%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.textoPie p{
+    font-size: 15px;
+}
+
+.itemPie{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imgfoot{
+    height: 75%;
+}
+
+/* -------------estilo index.html------------- */
+
+.gridAreaIndex{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "SecPrinc SecPrinc SecPrinc" 
+    "Nserv Nserv Nserv"
+    "footer footer footer";
+    grid-template-rows: 100px auto auto 100px;
+    gap: 0;
+}
+
+.seccionPrincipal{
+    grid-area: SecPrinc;
+    position: relative;
+}
+
+.seccionPrincipal .imagenFondo{
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.seccionPrincipal .textoPrincipal{
+    display: inline-block;
+    position: relative;
+    z-index: 11;
+    width: 49%;
+    padding: 25px;
+    margin-left: 50px;
+}
+
+.seccionPrincipal .textoPrincipal h1{
+    font-family: 'Gwendolyn', cursive;
+    font-size: 55px;
+    color: black;
+}
+
+.seccionPrincipal .textoPrincipal h3{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 15px;
+    color: darkred;
+}
+
+.seccionPrincipal .textoPrincipal p{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 22px;
+    
+}
+
+.seccionPrincipal .imgCarrusel{
+    margin-top: 10px;
+    display: inline;
+    position: relative;
+    z-index: 10;
+    height: "400px";
+    width: "auto";
+}
+
+#nuestros_servicios{
+    grid-area: Nserv;
+    height: 100%;
+    background-color: rgb(192, 192, 189);
+}
+
+#nuestros_servicios .titulo{
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#nuestros_servicios li{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    margin: 5px;
+}
+
+#nuestros_servicios div{
+    margin-top: 0px;
+    margin-left: 25px;
+    padding: 5px;
+}
+
+.cuerpo{
+    height: 100%;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: #cce7e8;
+}
+
+.gridAreaPaginas{ /* gris para paginas distintas al index */
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "Contenido Contenido Contenido" 
+    "footer footer footer";
+    grid-template-rows: 100px auto 100px;
+    gap: 0;
+}
+
+/* -------------estilos contacto.html------------- */
+
+.cuerpoContacto{
+    grid-area: Contenido;
+    width: 100%;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: #cce7e8;
+}
+
+.contactForm{
+    width: 80%; 
+    height: auto;
+    margin: 80px 10%;
+    border-radius: 10px;  
+    padding: 5%; 
+    background-color: #f0f0f0; 
+}
+
+.contactForm input{
+    background-color: #fbfbfb; 
+    width: 25%; 
+    height: 30px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color:black; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.contactForm textarea{
+    background-color: #fbfbfb; 
+    width: 55%; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: black; 
+    margin-top: 10px;  
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 15px; 
+}
+
+.entradaUnica input{
+    width: 50%;
+    margin-right: 50px;
+}
+
+.seleccion input{
+    width: 5%;
+    margin-right: 30px;
+}
+
+/* -------------estilo tratamiento.html------------- */
+
+#cuerpoTratamiento{
+    grid-area: Contenido;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.formulario label{
+    margin: 10px;
+}
+
+.formulario p{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.tratamientoItem{
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tratamientoItem h2{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 30px;
+}
+
+/*  -------------estilo zonas_entrega.html------------- */
+
+.seccionZonas{
+    grid-area: Contenido;
+}
+
+.cuerpoZonas{
+    margin: 30px 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.zonasItem{
+    width: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.zonasItem h2{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+
+.zonasItem p{
+    font-size: 20px;
+}
+
+/*  -------------estilo FAQ.html------------- */
+
+.cuerpoFaq{
+    grid-area: Contenido;
+    width: 80%;
+    margin: 30px 10%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: black;
+    border-style:solid;
+    border-radius: 75px;
+}
+
+.cuerpoFaq h3{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+}
+
+/*  -------------estilo Productos.html------------- */
+
+.cuerpoProducto{
+    grid-area: Contenido;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cuerpoProducto .producto{
+    border: black;
+    border-style:solid;
+    border-radius: 10px;
+    border-width: 1px;
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+
+.cuerpoProducto .producto img{
+    height: 175px;
+    width: auto;
+}
+
+/* media Query */
+
+@media (max-width: 768px){  /* media query nav y Footer */
+    .boxHeader img {
+        margin-left: 0%;
+        padding: 5%;
+        height: 100%;
+    }
+    .itemMenu{
+        font-size: 12px;
+        display: inline-block;
+        padding: 1%;
+        margin: 1%;
+    }
+    .imgfoot{
+        height: 75%;
+    }
+    #pieDePagina div{
+        padding-top: 3%;
+        width: 50%;
+        font-size: 20px;
+    }
+    .textoPie{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){  /* media query contenido index */
+    .gridAreaIndex{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "SecPrinc" 
+        "Nserv"
+        "footer";
+    gap: 0;
+    }
+    .seccionPrincipal .textoPrincipal{
+        display: inline-block;
+        position: relative;
+        z-index: 11;
+        width: 80%;
+        padding: 15px;
+        margin-left: 50px;
+    }
+    #nuestros_servicios{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 768px){   /* media query contenido productos */
+    .cuerpoProducto .producto img{
+        height: 100px;
+        width: auto;
+    }
+    .cuerpoProducto .producto h3{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px){   /* media query contenido Tratamiento */
+    #cuerpoTratamiento{
+        display: block;
+        margin: 0;
+        padding-top: 0;
+    }
+    .tratamientoItem{
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1024px){   /* media query contenido Zonas de Entrega */
+    .cuerpoZonas{
+        display: block;
+        margin: 0;
+        padding-top: 0;
+    }
+    .zonasItem{
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1024px){   /* media query Formulario contacto */
+    .contactForm{
+        width: 90%; 
+        margin: 80px 5%;
+    }
+}

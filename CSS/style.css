@@ -16,41 +16,24 @@ text-decoration: none;
 .boxHeader{
     grid-area: header;
     background: linear-gradient(to bottom, rgb(110, 196, 250), rgb(129, 222, 245));
-    display: flex;
-	position: sticky;
-	top: 0px;
     border-bottom: solid darkblue 1px;
-    z-index: 999;
-    height: 100%;
-    width: 100%;
-}
-
-.boxHeader img {
-    margin-left: 50%;
-	padding: 5%;
-    height: 100%;
 }
 
 .menu{
     font-family: 'Montserrat', sans-serif;
-    position: relative;
-    width: 100%;
 }
 
-.menu .estiloLista{
-    text-align: right;
-}
 
 .itemMenu{
     font-size: 16px;
-    display: inline-block;
-    padding: 1%;
     transition: all 0.2s;
+    margin: 10px;
 }
 
 .itemMenu:hover{
     font-size: 20px;
 }
+
 
 /* estilo pie de pagina */
 
@@ -94,7 +77,7 @@ text-decoration: none;
     "SecPrinc SecPrinc SecPrinc" 
     "Nserv Nserv Nserv"
     "footer footer footer";
-    grid-template-rows: 100px auto auto 100px;
+    grid-template-rows: auto auto auto 100px;
     gap: 0;
 }
 
@@ -190,7 +173,7 @@ text-decoration: none;
     "header header header"
     "Contenido Contenido Contenido" 
     "footer footer footer";
-    grid-template-rows: 100px auto 100px;
+    grid-template-rows: auto auto 100px;
     gap: 0;
 }
 
@@ -375,11 +358,6 @@ text-decoration: none;
 /* media Query */
 
 @media (max-width: 768px){  /* media query nav y Footer */
-    .boxHeader img {
-        margin-left: 0%;
-        padding: 5%;
-        height: 100%;
-    }
     .itemMenu{
         font-size: 12px;
         display: inline-block;

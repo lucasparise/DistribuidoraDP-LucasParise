@@ -314,9 +314,15 @@ text-decoration: none;
     align-content: center;
 }
 
-.cuerpoFaq h3{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 25px;
+.encabezado{
+    background: url(../Img/bg-ondas.jpg) no-repeat center bottom;
+}
+
+.encabezado h1{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 35px;
+    color: #0284cd;
+    font-weight: 500;
 }
 
 /*  -------------estilo Productos.html------------- */
@@ -351,6 +357,10 @@ text-decoration: none;
     }
     .textoPie{
         display: none;
+    }
+
+    .encabezado h1{         /* media para FAQ */
+        font-size: 25px;
     }
 }
 

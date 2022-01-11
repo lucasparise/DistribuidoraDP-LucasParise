@@ -1,9 +1,11 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: Entrega Clase 10 
+###Cambios: Entrega Clase 11. 
 
-*Se le agrega un gradient al back y transiciones a los items del nav.
+*Se integra Bootstrap en todas las paginas mediante un menu "hamburguesa".
 
-*se aplica animaciones a la lista del index 
+*se aplica un carousel al index.
 
-*Se le agrega un gradient al back del footer
+*Se le agrega un menu acordeon a la pagina FAQ.
+
+*Se le agregan tarjetas de productos con grids a la pagina Productos.

@@ -98,7 +98,7 @@ text-decoration: none;
     display: inline-block;
     position: relative;
     z-index: 11;
-    width: 49%;
+    width: 45%;
     padding: 25px;
     margin-left: 50px;
     margin-bottom: 100px;
@@ -122,13 +122,10 @@ text-decoration: none;
     
 }
 
-.seccionPrincipal .imgCarrusel{
-    margin-top: 10px;
-    display: inline;
-    position: relative;
+.carouselEdit{
+    display: inline-block;
     z-index: 10;
-    height: "400px";
-    width: "auto";
+    width: 50%;
 }
 
 #nuestros_servicios{
@@ -312,15 +309,9 @@ text-decoration: none;
     width: 80%;
     margin: 30px 10%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    border: black;
-    border-style:solid;
-    border-radius: 75px;
 }
 
 .cuerpoFaq h3{
@@ -340,20 +331,6 @@ text-decoration: none;
     justify-content: center;
 }
 
-.cuerpoProducto .producto{
-    border: black;
-    border-style:solid;
-    border-radius: 10px;
-    border-width: 1px;
-    display: flex;
-    margin: 5px;
-    padding: 10px;
-}
-
-.cuerpoProducto .producto img{
-    height: 175px;
-    width: auto;
-}
 
 /* media Query */
 
@@ -377,7 +354,7 @@ text-decoration: none;
     }
 }
 
-@media (max-width: 768px){  /* media query contenido index */
+@media (max-width: 1024px){  /* media query contenido index */
     .gridAreaIndex{
         display: grid;
         grid-template-areas:
@@ -400,23 +377,14 @@ text-decoration: none;
         padding-left: 5%;
         padding-right: 5%;
     }
-}
-
-@media (max-width: 1024px){ 
-    .seccionPrincipal .textoPrincipal{
-        margin-bottom: 15px;
+    .carouselEdit{
+        display: inline-block;
+        z-index: 10;
+        width: 100%;
     }
 }
 
-@media (max-width: 768px){   /* media query contenido productos */
-    .cuerpoProducto .producto img{
-        height: 100px;
-        width: auto;
-    }
-    .cuerpoProducto .producto h3{
-        font-size: 15px;
-    }
-}
+
 
 @media (max-width: 1024px){   /* media query contenido Tratamiento */
     #cuerpoTratamiento{

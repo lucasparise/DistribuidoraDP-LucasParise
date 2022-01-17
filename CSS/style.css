@@ -11,6 +11,9 @@ text-decoration: none;
     text-decoration: underline;
 } 
 
+.bgOndas{
+    background: url(../Img/bg-ondas.jpg) no-repeat center bottom;
+}
 /* estilo nav */
 
 .boxHeader{
@@ -130,13 +133,12 @@ text-decoration: none;
 
 #nuestros_servicios{
     grid-area: Nserv;
-    height: 100%;
-    background-color: rgb(192, 192, 189);
 }
 
 #nuestros_servicios .titulo{
     font-family: 'Balsamiq Sans', cursive;
     margin-top: 50px;
+    color: #0284cd;
 }
 
 #nuestros_servicios li{
@@ -147,7 +149,7 @@ text-decoration: none;
 }
 
 #nuestros_servicios li:hover{
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px;
     text-decoration: underline
 }
@@ -156,15 +158,31 @@ text-decoration: none;
     margin-top: 0px;
     margin-left: 25px;
     padding: 5px;
+    display: inline-block;
 }
 
-.cuerpo{
-    height: 100%;
+.ItemNuestroServicio{
     font-family: 'Balsamiq Sans', cursive;
-    background-color: #cce7e8;
+    font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+    font-size: 20px;
+    color: #2002cd;
 }
 
-.gridAreaPaginas{ /* gris para paginas distintas al index */
+.ItemNuestroServicio::before {
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    content: '\f111';
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    color: #62bdf2;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.gridAreaPaginas{ /* grids para paginas distintas al index */
     display: grid;
     grid-template-areas:
     "header header header"
@@ -312,10 +330,6 @@ text-decoration: none;
     justify-content: center;
     align-items: center;
     align-content: center;
-}
-
-.encabezado{
-    background: url(../Img/bg-ondas.jpg) no-repeat center bottom;
 }
 
 .encabezado h1{

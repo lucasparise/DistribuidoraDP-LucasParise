@@ -1,6 +1,8 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: Entrega Clase 11. 
+###Cambios: 2ds entrega proyecto. 
+
+*Agregado de backgrounds a las paginas
 
 *Se integra Bootstrap en todas las paginas mediante un menu "hamburguesa".
 

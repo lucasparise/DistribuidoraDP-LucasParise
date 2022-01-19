@@ -1,0 +1,113 @@
+.gridAreaIndex {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header header header" "SecPrinc SecPrinc SecPrinc"  "Nserv Nserv Nserv" "footer footer footer";
+  -ms-grid-rows: auto auto auto 100px;
+      grid-template-rows: auto auto auto 100px;
+  gap: 0;
+}
+
+.seccionPrincipal {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: SecPrinc;
+  position: relative;
+}
+
+.seccionPrincipal .imagenFondo {
+  position: absolute;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.seccionPrincipal .textoPrincipal {
+  display: inline-block;
+  position: relative;
+  z-index: 11;
+  width: 45%;
+  padding: 25px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.seccionPrincipal .textoPrincipal h1 {
+  font-family: 'Gwendolyn', cursive;
+  font-size: 55px;
+  color: black;
+}
+
+.seccionPrincipal .textoPrincipal h3 {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 15px;
+  color: darkred;
+}
+
+.seccionPrincipal .textoPrincipal p {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 22px;
+}
+
+.carouselEdit {
+  display: inline-block;
+  z-index: 10;
+  width: 50%;
+}
+
+#nuestros_servicios {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Nserv;
+}
+
+#nuestros_servicios .titulo {
+  font-family: 'Balsamiq Sans', cursive;
+  margin-top: 50px;
+  color: #0284cd;
+}
+
+#nuestros_servicios li {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  margin: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+#nuestros_servicios li:hover {
+  font-size: 25px;
+  margin: 20px;
+  text-decoration: underline;
+}
+
+#nuestros_servicios div {
+  margin-top: 0px;
+  margin-left: 25px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.ItemNuestroServicio {
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 500;
+  position: relative;
+  padding-left: 15px;
+  font-size: 20px;
+  color: #2002cd;
+}
+
+.ItemNuestroServicio::before {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: '\f111';
+  position: absolute;
+  left: -30px;
+  top: 10px;
+  color: #62bdf2;
+  font-size: 20px;
+  line-height: 1;
+}
+/*# sourceMappingURL=Index.css.map */

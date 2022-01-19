@@ -71,9 +71,9 @@ text-decoration: none;
     height: 75%;
 }
 
-/* -------------estilo index.html------------- */
+/* -------------estilo index.html------------- */  /* Se incluye en el Scss, se deja aca solo como borrador */
 
-.gridAreaIndex{
+/* .gridAreaIndex{
     display: grid;
     grid-template-areas:
     "header header header"
@@ -180,7 +180,7 @@ text-decoration: none;
     color: #62bdf2;
     font-size: 20px;
     line-height: 1;
-}
+} */
 
 .gridAreaPaginas{ /* grids para paginas distintas al index */
     display: grid;

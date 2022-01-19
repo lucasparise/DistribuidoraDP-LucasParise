@@ -1,11 +1,7 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: Entrega Clase 11. 
+###Cambios: Entrega Clase 13. 
 
-*Se integra Bootstrap en todas las paginas mediante un menu "hamburguesa".
+*se genera Scss para la pagina de index, se utiliza nesting y el operador &
 
-*se aplica un carousel al index.
-
-*Se le agrega un menu acordeon a la pagina FAQ.
-
-*Se le agregan tarjetas de productos con grids a la pagina Productos.
+*Por el momento se deja solo el index.css compilado, mas adelante se van a hacer partials para cada pagina y compilarlos en un unico archivo style.css

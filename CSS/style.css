@@ -12,7 +12,7 @@ text-decoration: none;
 } 
 
 .bgOndas{
-    background: url(../Img/bg-ondas.jpg) no-repeat center bottom;
+    background: url(../Img/bg-ondas.jpg) repeat center bottom;
 }
 /* estilo nav */
 

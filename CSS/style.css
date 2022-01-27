@@ -194,7 +194,9 @@ text-decoration: none;
 
 /* -------------estilos contacto.html------------- */
 
-.cuerpoContacto{
+/* queda como borrador para poder aplicar mixing y extend */
+
+/* .cuerpoContacto{
     grid-area: Contenido;
     width: 100%;
     font-family: 'Balsamiq Sans', cursive;
@@ -209,6 +211,7 @@ text-decoration: none;
     padding: 5%; 
     background-color: #f0f0f0; 
 }
+
 
 .contactForm input{
     background-color: #fbfbfb; 
@@ -246,7 +249,8 @@ text-decoration: none;
 .seleccion input{
     width: 5%;
     margin-right: 30px;
-}
+} */
+
 
 /* -------------estilo tratamiento.html------------- */
 

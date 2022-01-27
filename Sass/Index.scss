@@ -31,12 +31,11 @@
         h1{
             font-family: 'Gwendolyn', cursive;
             font-size: 55px;
-            color: black;
+            font-weight: 700;
         }
         h3{
             font-family: 'Balsamiq Sans', cursive;
             font-size: 15px;
-            color: darkred;
         }
         p{
             font-family: 'Architects Daughter', cursive;
@@ -56,7 +55,7 @@
     .titulo{
         font-family: 'Balsamiq Sans', cursive;
         margin-top: 50px;
-        color: #0284cd;
+        
     }
     li{
         font-family: 'Architects Daughter', cursive;
@@ -83,7 +82,6 @@
     position: relative;
     padding-left: 15px;
     font-size: 20px;
-    color: #2002cd;
     &::before {
         font-family: "font awesome 5 free";
         font-weight: 900;
@@ -96,3 +94,102 @@
         line-height: 1;
     }
 }
+
+
+//map para colores de texto de index
+$coloresTexto:(
+    tituloCuerpo:#0284cd,
+    textoCuerpo:#2002cd,
+    tituloH3:darkred,
+    tituloH1:black,
+);
+
+@each $tipoTexto, $color in $coloresTexto {
+    .color--#{$tipoTexto}{
+        color:$color;
+    }
+    
+}
+
+
+/* estilo para Faq Mixing y Extend */
+
+@mixin EstilosImput {
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color:black; 
+    margin-top: 10px;  
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+
+.cuerpoContacto{
+    grid-area: Contenido;
+    width: 100%;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: #cce7e8;
+}
+
+.contactForm{
+    width: 80%; 
+    height: auto;
+    margin: 80px 10%;
+    border-radius: 10px;  
+    padding: 5%; 
+    background-color: #f0f0f0;
+    input{
+        @include EstilosImput;
+        width: 25%; 
+        height: 30px; 
+        display: inline-block;
+    }
+    textarea{
+        @include EstilosImput;
+        width: 55%; 
+        height: 150px; 
+        padding-top: 15px; 
+    }
+    .entradaUnica input{
+        width: 50%;
+        margin-right: 50px;
+    }
+    .seleccion input{
+        width: 5%;
+        margin-right: 30px;
+    }
+}
+
+.boton{
+    background-color: white;
+    color: black;
+    border-color: blue;
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px;
+}
+
+.botonEnviar{
+    @extend .boton;
+    background-color: green;
+    color: red;
+    font-weight: bold
+}
+
+.botonLimpiar{
+    @extend .boton;
+    background-color: red;
+    color: royalblue;
+    font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+

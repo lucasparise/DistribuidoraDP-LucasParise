@@ -36,13 +36,12 @@
 .seccionPrincipal .textoPrincipal h1 {
   font-family: 'Gwendolyn', cursive;
   font-size: 55px;
-  color: black;
+  font-weight: 700;
 }
 
 .seccionPrincipal .textoPrincipal h3 {
   font-family: 'Balsamiq Sans', cursive;
   font-size: 15px;
-  color: darkred;
 }
 
 .seccionPrincipal .textoPrincipal p {
@@ -66,7 +65,6 @@
 #nuestros_servicios .titulo {
   font-family: 'Balsamiq Sans', cursive;
   margin-top: 50px;
-  color: #0284cd;
 }
 
 #nuestros_servicios li {
@@ -96,7 +94,6 @@
   position: relative;
   padding-left: 15px;
   font-size: 20px;
-  color: #2002cd;
 }
 
 .ItemNuestroServicio::before {
@@ -109,5 +106,95 @@
   color: #62bdf2;
   font-size: 20px;
   line-height: 1;
+}
+
+.color--tituloCuerpo {
+  color: #0284cd;
+}
+
+.color--textoCuerpo {
+  color: #2002cd;
+}
+
+.color--tituloH3 {
+  color: darkred;
+}
+
+.color--tituloH1 {
+  color: black;
+}
+
+/* estilo para Faq Mixing y Extend */
+.cuerpoContacto {
+  grid-area: Contenido;
+  width: 100%;
+  font-family: 'Balsamiq Sans', cursive;
+  background-color: #cce7e8;
+}
+
+.contactForm {
+  width: 80%;
+  height: auto;
+  margin: 80px 10%;
+  border-radius: 10px;
+  padding: 5%;
+  background-color: #f0f0f0;
+}
+
+.contactForm input {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  width: 25%;
+  height: 30px;
+  display: inline-block;
+}
+
+.contactForm textarea {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  width: 55%;
+  height: 150px;
+  padding-top: 15px;
+}
+
+.contactForm .entradaUnica input {
+  width: 50%;
+  margin-right: 50px;
+}
+
+.contactForm .seleccion input {
+  width: 5%;
+  margin-right: 30px;
+}
+
+.boton, .botonEnviar, .botonLimpiar {
+  background-color: white;
+  color: black;
+  border-color: blue;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.botonEnviar {
+  background-color: green;
+  color: red;
+  font-weight: bold;
+}
+
+.botonLimpiar {
+  background-color: red;
+  color: royalblue;
+  font-weight: bold;
 }
 /*# sourceMappingURL=Index.css.map */

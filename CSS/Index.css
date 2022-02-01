@@ -13,6 +13,12 @@
   -ms-grid-column-span: 3;
   grid-area: SecPrinc;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .seccionPrincipal .imagenFondo {
@@ -52,7 +58,7 @@
 .carouselEdit {
   display: inline-block;
   z-index: 10;
-  width: 50%;
+  width: 40%;
 }
 
 #nuestros_servicios {
@@ -67,21 +73,11 @@
   margin-top: 50px;
 }
 
-#nuestros_servicios li {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 20px;
-  margin: 10px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+#nuestros_servicios .iconos-home img {
+  width: 60px;
 }
 
-#nuestros_servicios li:hover {
-  font-size: 25px;
-  margin: 20px;
-  text-decoration: underline;
-}
-
-#nuestros_servicios div {
+#nuestros_servicios .divNuestroServicio {
   margin-top: 0px;
   margin-left: 25px;
   padding: 5px;
@@ -129,7 +125,6 @@
   grid-area: Contenido;
   width: 100%;
   font-family: 'Balsamiq Sans', cursive;
-  background-color: #cce7e8;
 }
 
 .contactForm {
@@ -177,24 +172,12 @@
   margin-right: 30px;
 }
 
-.boton, .botonEnviar, .botonLimpiar {
+.boton {
   background-color: white;
   color: black;
   border-color: blue;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-}
-
-.botonEnviar {
-  background-color: green;
-  color: red;
-  font-weight: bold;
-}
-
-.botonLimpiar {
-  background-color: red;
-  color: royalblue;
-  font-weight: bold;
 }
 /*# sourceMappingURL=Index.css.map */

@@ -43,7 +43,7 @@ text-decoration: none;
 #pieDePagina{
     grid-area: footer;
     /* background-color: rgb(62, 118, 202); */
-    background: linear-gradient(to bottom, rgb(129, 222, 245), rgb(3, 86, 211));
+    background: linear-gradient(to bottom, rgb(129, 222, 245), rgb(32, 104, 212));
     display: flex;
     width: 100%;
     height: 100%;
@@ -54,133 +54,31 @@ text-decoration: none;
 #pieDePagina div{
     padding-top: 1%;
     width: 33%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Architects Daughter', cursive;
     font-weight: bold;
     font-size: 20px;
 }
 
 .textoPie p{
-    font-size: 15px;
+    font-size: 25px;
 }
 
 .itemPie{
     display: flex;
     justify-content: space-evenly;
 }
+
+.itemPie p{
+    font-size: 25px;
+}
+
 .imgfoot{
     height: 75%;
 }
 
-/* -------------estilo index.html------------- */  /* Se incluye en el Scss, se deja aca solo como borrador */
+/* -------------estilo index.html y Contacto.html------------- */  /* Se incluyen en el Scss */
 
-/* .gridAreaIndex{
-    display: grid;
-    grid-template-areas:
-    "header header header"
-    "SecPrinc SecPrinc SecPrinc" 
-    "Nserv Nserv Nserv"
-    "footer footer footer";
-    grid-template-rows: auto auto auto 100px;
-    gap: 0;
-}
 
-.seccionPrincipal{
-    grid-area: SecPrinc;
-    position: relative;
-}
-
-.seccionPrincipal .imagenFondo{
-    position: absolute;
-    opacity: 0.5;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.seccionPrincipal .textoPrincipal{
-    display: inline-block;
-    position: relative;
-    z-index: 11;
-    width: 45%;
-    padding: 25px;
-    margin-left: 50px;
-    margin-bottom: 100px;
-}
-
-.seccionPrincipal .textoPrincipal h1{
-    font-family: 'Gwendolyn', cursive;
-    font-size: 55px;
-    color: black;
-}
-
-.seccionPrincipal .textoPrincipal h3{
-    font-family: 'Balsamiq Sans', cursive;
-    font-size: 15px;
-    color: darkred;
-}
-
-.seccionPrincipal .textoPrincipal p{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 22px;
-    
-}
-
-.carouselEdit{
-    display: inline-block;
-    z-index: 10;
-    width: 50%;
-}
-
-#nuestros_servicios{
-    grid-area: Nserv;
-}
-
-#nuestros_servicios .titulo{
-    font-family: 'Balsamiq Sans', cursive;
-    margin-top: 50px;
-    color: #0284cd;
-}
-
-#nuestros_servicios li{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 20px;
-    margin: 10px;
-    transition: all 1s;
-}
-
-#nuestros_servicios li:hover{
-    font-size: 25px;
-    margin: 20px;
-    text-decoration: underline
-}
-
-#nuestros_servicios div{
-    margin-top: 0px;
-    margin-left: 25px;
-    padding: 5px;
-    display: inline-block;
-}
-
-.ItemNuestroServicio{
-    font-family: 'Balsamiq Sans', cursive;
-    font-weight: 500;
-    position: relative;
-    padding-left: 15px;
-    font-size: 20px;
-    color: #2002cd;
-}
-
-.ItemNuestroServicio::before {
-    font-family: "font awesome 5 free";
-    font-weight: 900;
-    content: '\f111';
-    position: absolute;
-    left: -30px;
-    top: 10px;
-    color: #62bdf2;
-    font-size: 20px;
-    line-height: 1;
-} */
 
 .gridAreaPaginas{ /* grids para paginas distintas al index */
     display: grid;
@@ -191,66 +89,6 @@ text-decoration: none;
     grid-template-rows: auto auto 100px;
     gap: 0;
 }
-
-/* -------------estilos contacto.html------------- */
-
-/* queda como borrador para poder aplicar mixing y extend */
-
-/* .cuerpoContacto{
-    grid-area: Contenido;
-    width: 100%;
-    font-family: 'Balsamiq Sans', cursive;
-    background-color: #cce7e8;
-}
-
-.contactForm{
-    width: 80%; 
-    height: auto;
-    margin: 80px 10%;
-    border-radius: 10px;  
-    padding: 5%; 
-    background-color: #f0f0f0; 
-}
-
-
-.contactForm input{
-    background-color: #fbfbfb; 
-    width: 25%; 
-    height: 30px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color:black; 
-    margin-top: 10px;  
-    padding-left: 10px;
-    margin-bottom: 20px;
-    display: inline-block;
-}
-
-.contactForm textarea{
-    background-color: #fbfbfb; 
-    width: 55%; 
-    height: 150px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: black; 
-    margin-top: 10px;  
-    margin-bottom: 20px;
-    padding-left: 10px;
-    padding-top: 15px; 
-}
-
-.entradaUnica input{
-    width: 50%;
-    margin-right: 50px;
-}
-
-.seleccion input{
-    width: 5%;
-    margin-right: 30px;
-} */
-
 
 /* -------------estilo tratamiento.html------------- */
 
@@ -392,23 +230,26 @@ text-decoration: none;
         "footer";
     gap: 0;
     }
+    .seccionPrincipal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .seccionPrincipal .textoPrincipal{
-        display: inline-block;
         position: relative;
         z-index: 11;
         width: 80%;
         padding: 15px;
-        margin-left: 50px;
+        margin-left: 20px;
         margin-bottom: 10px;
+    }
+    .carouselEdit{
+        z-index: 10;
+        width: 70%;
     }
     #nuestros_servicios{
         padding-left: 5%;
         padding-right: 5%;
-    }
-    .carouselEdit{
-        display: inline-block;
-        z-index: 10;
-        width: 100%;
     }
 }
 

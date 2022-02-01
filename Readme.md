@@ -1,10 +1,13 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: Entrega Clase 15
+###Cambios: 3ra Preentrega
 
-*Se implementa SEO con descriptions y keywords en el encabezado de todas las paginas.
+*se cargan imagenes definitivas al index y a la seccion productos.
 
-*se sube un sitemaps .xml
+*se modifica spacing en pagina productos.
 
-*Utilizacion de map en index.scss y Extend y mixing en botones del Faq.html
+*se modifica back en pagina contacto.
 
+*Se cargan items y textos definitivos a seccion de index
+
+*se genera footer definitivo

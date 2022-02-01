@@ -13,6 +13,8 @@
 .seccionPrincipal{
     grid-area: SecPrinc;
     position: relative; 
+    display: flex;
+    justify-content: space-evenly;
     .imagenFondo{
         position: absolute;
         opacity: 0.5;
@@ -47,7 +49,7 @@
 .carouselEdit{
     display: inline-block;
     z-index: 10;
-    width: 50%;
+    width: 40%;
 }
 
 #nuestros_servicios{
@@ -57,18 +59,11 @@
         margin-top: 50px;
         
     }
-    li{
-        font-family: 'Architects Daughter', cursive;
-        font-size: 20px;
-        margin: 10px;
-        transition: all 1s;
-        &:hover{
-            font-size: 25px;
-            margin: 20px;
-            text-decoration: underline
-        }
+    .iconos-home img{
+        width: 60px;
     }
-    div{
+    
+    .divNuestroServicio{
         margin-top: 0px;
         margin-left: 25px;
         padding: 5px;
@@ -129,7 +124,6 @@ $coloresTexto:(
     grid-area: Contenido;
     width: 100%;
     font-family: 'Balsamiq Sans', cursive;
-    background-color: #cce7e8;
 }
 
 .contactForm{
@@ -170,19 +164,6 @@ $coloresTexto:(
     border-width: 1px;
 }
 
-.botonEnviar{
-    @extend .boton;
-    background-color: green;
-    color: red;
-    font-weight: bold
-}
-
-.botonLimpiar{
-    @extend .boton;
-    background-color: red;
-    color: royalblue;
-    font-weight: bold
-}
 
 
 

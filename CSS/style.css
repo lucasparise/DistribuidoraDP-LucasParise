@@ -11,9 +11,28 @@ text-decoration: none;
     text-decoration: underline;
 } 
 
+.negrita{
+    font-weight: 700;
+}
+
 .bgOndas{
     background: url(../Img/bg-ondas.jpg) repeat center bottom;
 }
+
+.tituloSecciones{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0284cd;
+}
+
+.textoSecciones{
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 18px;
+    color: #0284cd;
+}
+
+
 /* estilo nav */
 
 .boxHeader{
@@ -28,7 +47,7 @@ text-decoration: none;
 
 
 .itemMenu{
-    font-size: 16px;
+    font-size: 17px;
     transition: all 0.2s;
     margin: 10px;
 }
@@ -42,12 +61,13 @@ text-decoration: none;
 
 #pieDePagina{
     grid-area: footer;
-    /* background-color: rgb(62, 118, 202); */
     background: linear-gradient(to bottom, rgb(129, 222, 245), rgb(32, 104, 212));
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: space-evenly;
+    position: relative;
+    bottom: 0;
 }
 
 
@@ -104,6 +124,14 @@ text-decoration: none;
     align-content: center;
 }
 
+.tratamientoItem{
+    width: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .formulario label{
     margin: 10px;
 }
@@ -112,20 +140,6 @@ text-decoration: none;
     margin-top: 20px;
     margin-left: 10px;
 }
-
-.tratamientoItem{
-    width: 50%;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.tratamientoItem h2{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 30px;
-}
-
 /*  -------------estilo zonas_entrega.html------------- */
 
 .seccionZonas{
@@ -151,16 +165,6 @@ text-decoration: none;
     padding-right: 30px;
 }
 
-.zonasItem h2{
-    font-family: 'Architects Daughter', cursive;
-    font-size: 26px;
-    margin-bottom: 50px;
-}
-
-.zonasItem p{
-    font-size: 20px;
-}
-
 /*  -------------estilo FAQ.html------------- */
 
 .cuerpoFaq{
@@ -177,7 +181,12 @@ text-decoration: none;
     font-family: 'Balsamiq Sans', cursive;
     font-size: 35px;
     color: #0284cd;
-    font-weight: 500;
+}
+
+.textoPreguntas{
+    font-family: 'Balsamiq Sans', cursive;
+    color: #0284cd;
+    font-size: 18px;
 }
 
 /*  -------------estilo Productos.html------------- */
@@ -203,7 +212,7 @@ text-decoration: none;
         margin: 1%;
     }
     .imgfoot{
-        height: 75%;
+        height: 65%;
     }
     #pieDePagina div{
         padding-top: 3%;
@@ -263,21 +272,23 @@ text-decoration: none;
     .tratamientoItem{
         width: 100%;
         margin-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 @media (max-width: 1024px){   /* media query contenido Zonas de Entrega */
     .cuerpoZonas{
-        display: block;
+        flex-direction: column;
         margin: 0;
         padding-top: 0;
     }
     .zonasItem{
         width: 100%;
-        margin-bottom: 10px;
-        padding-left: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        padding-left: 0;
         padding-right: 20px;
     }
 }

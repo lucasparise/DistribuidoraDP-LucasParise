@@ -9,8 +9,10 @@
     <meta name="keywords"  content="Soda, Agua, Bidones, Sifones, Reparto, Dispenser">
     <link rel="shortcut icon" href="./Img/Icono-min.png">
     <title>Distribuidora DP</title>
-    <!-- bootstrap CDN -->
+    <!-- bootstrap/animaciones CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- links css -->
     <link rel="stylesheet" href="./CSS/Normalize.css">
     <link rel="stylesheet" href="./CSS/Index.css">
     <link rel="stylesheet" href="./CSS/style.css">
@@ -26,7 +28,7 @@
 <body class="gridAreaIndex">
     
     <header class="boxHeader sticky-top"> <!-- inicio menu nav -->
-        <nav class="navbar  navbar-expand-lg navbar-light menu ">
+        <nav class="navbar navbar-expand-lg navbar-light menu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./Img/Icono.png" alt="Logo" height="75" width="auto">
@@ -63,14 +65,13 @@
 
     <section class="seccionPrincipal">  <!-- inicio cuerpo principal -->
         <img src="./Img/imgAgua.jpg" alt="imagenFondo" class="imagenFondo">
-        <div class="textoPrincipal">
-            <h3 class="color--tituloH3">20 años llevandote el agua mas pura</h3>
-            <h1 class="color--tituloH1">Distribuidora DP</h1>
-            <p>Somos una empresa familiar ubicada en el barrio de Villa lugano, CABA,  que desde hace 20 años llevamos el agua mas pura a todos nuestros clientes.</p>
-            <p>Elaboramos nuestros productos bajo estrictos estandares de higiene y calidad, cumplimos con las normas ISO 9001 que certifican la excelencia de nuestros productos, asi como la mejor atencion al cliente.</p>
+        <div class="textoPrincipal" data-aos="fade-up">
+            <h1 class="color--tituloH1" >Distribuidora DP</h1>
+            <p>Somos una empresa familiar ubicada en el barrio de Villa lugano, CABA,  que desde hace 20 años llevamos el agua más pura a todos nuestros clientes.</p>
+            <p>Elaboramos nuestros productos bajo estrictos estándares de higiene y calidad, cumplimos con las normas ISO 9001 que certifican la excelencia de nuestros productos, así como la mejor atención al cliente.</p>
         </div>
 
-        <div id="carouselExampleIndicators" class="carousel slide carouselEdit" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carouselEdit" data-bs-ride="carousel" >
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -100,10 +101,10 @@
 
     <section id="nuestros_servicios" class="bgOndas"> <!--inicio seccion nuestros servicios -->
 
-        <div class="container mb-5">
-            <h2 class="titulo color--tituloCuerpo">¿Por qué elegirnos?</h2>
+        <div class="container mb-5" >
+            <h2 class="titulo color--tituloCuerpo" data-aos="fade-up">¿Por qué elegirnos?</h2>
         </div>
-        <div class="d-flex flex-row container">
+        <div class="d-flex flex-row container" data-aos="fade-up">
             <div class="col-4 px-0 px-lg-2">
                 <div class="iconos-home d-flex flex-column align-items-center align-items-lg-start flex-lg-row p-2">
                     <img src="./Img/iconos-home-01.svg" class="mr-2 mb-2 mb-lg-0">
@@ -138,28 +139,28 @@
 
     <div class="container">
         <div class="col-lg-12 m-0">
-            <h2 class="titulo color--tituloCuerpo">Nuestro Servicio:</h2>
+            <h2 class="titulo color--tituloCuerpo" data-aos="fade-up">Nuestro Servicio:</h2>
         </div>
         <div class="row col-lg-5 mb-0 px-4 align-top color--textoCuerpo divNuestroServicio">
-            <div class="ItemNuestroServicio m-3">
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
                 Acordamos un día y hora de la semana para visitarte.
             </div>
-            <div class="ItemNuestroServicio m-3">
-                En cada visita decidís si comprar productos o no.
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
+                En cada visita decidís si comprar nuestros productos o no.
             </div>
-            <div class="ItemNuestroServicio m-3">
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
                 La primer entrega la realizamos antes de las 24hs.
             </div>
         </div>
 
         <div class="row col-lg-5 mb-5 px-4 align-top color--textoCuerpo divNuestroServicio">
-            <div class="ItemNuestroServicio m-3">
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
                 Podés darte de alta o baja cuando quieras sin costo.             
             </div>
-            <div class="ItemNuestroServicio m-3">
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
                 Los envases y dispenser natural se entregan sin cargo.
             </div>
-            <div class="ItemNuestroServicio m-3">
+            <div class="ItemNuestroServicio m-3" data-aos="fade-up">
                 Aceptamos todas las tarjetas y medios de pago.                               
             </div>
         </div>
@@ -192,5 +193,9 @@
     </footer>  
     <!-- script bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

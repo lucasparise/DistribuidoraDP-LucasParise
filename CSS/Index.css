@@ -51,7 +51,7 @@
 }
 
 .seccionPrincipal .textoPrincipal p {
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Balsamiq Sans', cursive;
   font-size: 22px;
 }
 
@@ -90,6 +90,7 @@
   position: relative;
   padding-left: 15px;
   font-size: 20px;
+  color: #0284cd;
 }
 
 .ItemNuestroServicio::before {
@@ -110,10 +111,6 @@
 
 .color--textoCuerpo {
   color: #2002cd;
-}
-
-.color--tituloH3 {
-  color: darkred;
 }
 
 .color--tituloH1 {

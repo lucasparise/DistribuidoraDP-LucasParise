@@ -40,7 +40,7 @@
             font-size: 15px;
         }
         p{
-            font-family: 'Architects Daughter', cursive;
+            font-family: 'Balsamiq Sans', cursive;
             font-size: 22px;
         }        
     }
@@ -77,6 +77,7 @@
     position: relative;
     padding-left: 15px;
     font-size: 20px;
+    color: #0284cd;
     &::before {
         font-family: "font awesome 5 free";
         font-weight: 900;
@@ -95,7 +96,6 @@
 $coloresTexto:(
     tituloCuerpo:#0284cd,
     textoCuerpo:#2002cd,
-    tituloH3:darkred,
     tituloH1:black,
 );
 

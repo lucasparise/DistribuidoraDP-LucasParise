@@ -61,122 +61,127 @@
 
 
     <section class="cuerpoContacto bgOndas">    <!-- inicio cuerpo principal -->
+
         <div class="contactForm">
             <div class="formulario">
-                <h2>Contactate con nosotros</h2>
-                <h3>Escribenos y pronto nos comunicaremos contigo</h3>
+                <h2 class="mb-4" >Contactate con nosotros</h2>
+                <h5 class="mb-5">Escribenos y pronto nos comunicaremos contigo</h5>
 
                 <form action="" method="get" enctype="text/plain">
                     <fieldset>
-                        <div>
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" required>
-
-                            <label for="apellido">Apellido</label>
-                            <input type="text" id="apellido" required>
+                        <div class="row mb-4">
+                            <div class="col-md mb-4 mb-md-0 form-group">
+                                <label class="textoForm" for="name">Nombre</label>
+                                <input class="imputTexto" type="text" id="name" required>
+                            </div>
+                            <div class="col-md form-group">    
+                                <label class="textoForm" for="apellido">Apellido</label>
+                                <input class="imputTexto" type="text" id="apellido" required>
+                            </div>
                         </div>
 
-                        <div class="entradaUnica">
-                            <label for="mail">E-mail</label>
-                            <input type="email" id="mail" required>
+                        <div class="form-group mb-4">
+                            <label class="textoForm" for="mail">E-mail</label>
+                            <input class="imputTexto" type="email" id="mail" required>
                         </div>
 
-                        <div>
-                            <label for="telefono">Telefono</label>
-                            <input type="tel" id="telefono" required>
+                        <div class="form-group mb-4">
+                            <label class="textoForm" for="direccion">Dirección</label>
+                            <input class="imputTexto" type="text" id="direccion" required>
                         </div>
 
-                        <div class="entradaUnica">
-                            <label for="direccion">Direccion</label>
-                            <input type="text" id="direccion" required>
-                        </div>
-                        <div>
-                            <label for="barrio">Barrio</label>
-                            <select name="barrio" id="Barrio" required >
-                                <option value="Agronomía">Agronomía</option>			
-                                <option value="Almagro">Almagro</option>
-                                <option value="Balvanera">Balvanera</option>
-                                <option value="Barracas">Barracas</option>
-                                <option value="Belgrano">Belgrano</option>
-                                <option value="Boedo">Boedo</option>
-                                <option value="Caballito">Caballito</option>
-                                <option value="Chacarita">Chacarita</option>
-                                <option value="Coghlan">Coghlan</option>
-                                <option value="Colegiales">Colegiales</option>
-                                <option value="Constitución">Constitución</option>
-                                <option value="Flores">Flores</option>
-                                <option value="Floresta">Floresta</option>
-                                <option value="La Boca">La Boca</option>
-                                <option value="La Paternal">La Paternal</option>
-                                <option value="Liniers">Liniers</option>
-                                <option value="Mataderos">Mataderos</option>
-                                <option value="Monte Castro">Monte Castro</option>
-                                <option value="Monserrat">Monserrat</option>
-                                <option value="Nueva Pompeya">Nueva Pompeya</option>
-                                <option value="Núñez">Núñez</option>
-                                <option value="Palermo">Palermo</option>
-                                <option value="Parque Avellaneda">Parque Avellaneda</option>
-                                <option value="Parque Chacabuco">Parque Chacabuco</option>
-                                <option value="Parque Chas">Parque Chas</option>
-                                <option value="Parque Patricios">Parque Patricios</option>
-                                <option value="Puerto Madero">Puerto Madero</option>
-                                <option value="Recoleta">Recoleta</option>
-                                <option value="Retiro">Retiro</option>
-                                <option value="Saavedra">Saavedra</option>
-                                <option value="San Cristóbal">San Cristóbal</option>
-                                <option value="San Nicolás">San Nicolás</option>
-                                <option value="San Telmo">San Telmo</option>
-                                <option value="Vélez Sársfield">Vélez Sársfield</option>
-                                <option value="Versalles">Versalles</option>
-                                <option value="Villa Crespo">Villa Crespo</option>
-                                <option value="Villa del Parque">Villa del Parque</option>
-                                <option value="Villa Devoto">Villa Devoto</option>
-                                <option value="Villa General Mitre">Villa General Mitre</option>
-                                <option value="Villa Lugano">Villa Lugano</option>
-                                <option value="Villa Luro">Villa Luro</option>
-                                <option value="Villa Ortúzar">Villa Ortúzar</option>
-                                <option value="Villa Pueyrredón">Villa Pueyrredón</option>
-                                <option value="Villa Real">Villa Real</option>
-                                <option value="Villa Riachuelo">Villa Riachuelo</option>
-                                <option value="Villa Santa Rita">Villa Santa Rita</option>
-                                <option value="Villa Soldati">Villa Soldati</option>
-                                <option value="Villa Urquiza">Villa Urquiza</option>
-                            </select>
-                        </div>
-
-                        <div class="seleccion">
-                            <p>¿Es cliente?</p>
-                            <label for="es_cliente">Si</label> 
-                            <input type="radio" name="es_cliente " value="Si" required>
-                            <label for="es_cliente">No</label>
-                            <input type="radio" name="es_cliente " value="No" required>
+                        <div class="row mb-5">
+                            <div class="col-md mb-4 mb-md-0 form-group"> 
+                                <label class="textoForm" for="telefono">Teléfono</label>
+                                <input class="imputTexto" type="tel" id="telefono" required>
+                            </div>
+                            <div class="col-md form-group">
+                                <label class="textoForm" for="barrio">Barrio</label>
+                                <select class="imputTexto" name="barrio" id="Barrio" required >
+                                    <option value="Agronomía">Agronomía</option>			
+                                    <option value="Almagro">Almagro</option>
+                                    <option value="Balvanera">Balvanera</option>
+                                    <option value="Barracas">Barracas</option>
+                                    <option value="Belgrano">Belgrano</option>
+                                    <option value="Boedo">Boedo</option>
+                                    <option value="Caballito">Caballito</option>
+                                    <option value="Chacarita">Chacarita</option>
+                                    <option value="Coghlan">Coghlan</option>
+                                    <option value="Colegiales">Colegiales</option>
+                                    <option value="Constitución">Constitución</option>
+                                    <option value="Flores">Flores</option>
+                                    <option value="Floresta">Floresta</option>
+                                    <option value="La Boca">La Boca</option>
+                                    <option value="La Paternal">La Paternal</option>
+                                    <option value="Liniers">Liniers</option>
+                                    <option value="Mataderos">Mataderos</option>
+                                    <option value="Monte Castro">Monte Castro</option>
+                                    <option value="Monserrat">Monserrat</option>
+                                    <option value="Nueva Pompeya">Nueva Pompeya</option>
+                                    <option value="Núñez">Núñez</option>
+                                    <option value="Palermo">Palermo</option>
+                                    <option value="Parque Avellaneda">Parque Avellaneda</option>
+                                    <option value="Parque Chacabuco">Parque Chacabuco</option>
+                                    <option value="Parque Chas">Parque Chas</option>
+                                    <option value="Parque Patricios">Parque Patricios</option>
+                                    <option value="Puerto Madero">Puerto Madero</option>
+                                    <option value="Recoleta">Recoleta</option>
+                                    <option value="Retiro">Retiro</option>
+                                    <option value="Saavedra">Saavedra</option>
+                                    <option value="San Cristóbal">San Cristóbal</option>
+                                    <option value="San Nicolás">San Nicolás</option>
+                                    <option value="San Telmo">San Telmo</option>
+                                    <option value="Vélez Sársfield">Vélez Sársfield</option>
+                                    <option value="Versalles">Versalles</option>
+                                    <option value="Villa Crespo">Villa Crespo</option>
+                                    <option value="Villa del Parque">Villa del Parque</option>
+                                    <option value="Villa Devoto">Villa Devoto</option>
+                                    <option value="Villa General Mitre">Villa General Mitre</option>
+                                    <option value="Villa Lugano">Villa Lugano</option>
+                                    <option value="Villa Luro">Villa Luro</option>
+                                    <option value="Villa Ortúzar">Villa Ortúzar</option>
+                                    <option value="Villa Pueyrredón">Villa Pueyrredón</option>
+                                    <option value="Villa Real">Villa Real</option>
+                                    <option value="Villa Riachuelo">Villa Riachuelo</option>
+                                    <option value="Villa Santa Rita">Villa Santa Rita</option>
+                                    <option value="Villa Soldati">Villa Soldati</option>
+                                    <option value="Villa Urquiza">Villa Urquiza</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div class="entradaUnica">
-                            <label for="conocio">¿Cómo nos conoció?</label>
-                            <input type="text"  id="conocio">
-                        </div>
+                            <div class="mb-4">
+                                <p>¿Cuál es el motivo de tu mensaje?</p>
+                                <div class="form-check form-check-inline">
+                                    <label for="es_cliente"> Hacer un pedido</label> 
+                                    <input class="" type="radio" name="motivo" value="1" required>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label for="es_cliente"> Sugerencias</label> 
+                                    <input type="radio" name="motivo" value="2" required> 
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label for="es_cliente"> Reclamos</label> 
+                                    <input type="radio" name="motivo" value="3" required> 
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label for="es_cliente"> Otros</label> 
+                                    <input type="radio" name="motivo" value="4" required> 
+                                </div>
+                            </div>
 
-                        <div class="seleccion">
-                            <p>¿Cuál es el motivo de tu mensaje?</p>
-                            <label for="es_cliente"> Hacer un pedido</label> 
-                            <input type="radio" name="motivo" value="1" required>
-                            <label for="es_cliente"> Sugerencias</label> 
-                            <input type="radio" name="motivo" value="2" required> 
-                            <label for="es_cliente"> Reclamos</label> 
-                            <input type="radio" name="motivo" value="3" required> 
-                            <label for="es_cliente"> Otros</label> 
-                            <input type="radio" name="motivo" value="4" required> 
-                        </div>
-                        <div>
-                            <p>Tu mensaje</p>
-                            <label for="comentarios"></label>
-                            <textarea name="comentarios" id="comentarios" cols="50" rows="10" required ></textarea>
+                            
+                        <div class="form-group mb-5">
+                            <!-- <p>Tu mensaje</p> -->
+                            <label for="comentarios"> Tu mensaje: </label>
+                            <textarea class="form-control m-2" name="comentarios" id="comentarios" rows="8" required ></textarea>
                         </div>    
 
-                        <input class="boton" type="submit" value="Enviar"> 
-                        <input class="boton" type="reset" value="Limpiar">
-
+                        <div class="d-flex justify-content-center">
+                            <input type="submit" class="btn btn-primary mx-5" value="Enviar"> 
+                            <input type="reset" class="btn btn-secondary mx-5" value="Limpiar">
+                        </div>
+                        
                     </fieldset>
                 </form>
             </div>

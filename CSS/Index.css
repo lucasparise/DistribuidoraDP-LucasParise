@@ -122,59 +122,43 @@
   grid-area: Contenido;
   width: 100%;
   font-family: 'Balsamiq Sans', cursive;
+  color: #0284cd;
+}
+
+.imputcompleto {
+  width: 70%;
 }
 
 .contactForm {
   width: 80%;
   height: auto;
-  margin: 80px 10%;
+  margin: 40px 10%;
   border-radius: 10px;
-  padding: 5%;
+  padding: 1% 5%;
   background-color: #f0f0f0;
 }
 
-.contactForm input {
+.contactForm .imputTexto {
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: black;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  width: 25%;
+  width: 75%;
+  width: 70%;
   height: 30px;
-  display: inline-block;
 }
 
-.contactForm textarea {
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  width: 55%;
-  height: 150px;
-  padding-top: 15px;
+.contactForm .textoForm {
+  width: 60px;
+  font-size: 16px;
 }
 
-.contactForm .entradaUnica input {
-  width: 50%;
-  margin-right: 50px;
+.formulario label {
+  margin: 10px;
 }
 
-.contactForm .seleccion input {
-  width: 5%;
-  margin-right: 30px;
-}
-
-.boton {
-  background-color: white;
-  color: black;
-  border-color: blue;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
+.formulario p {
+  margin-top: 20px;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=Index.css.map */

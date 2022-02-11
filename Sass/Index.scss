@@ -1,3 +1,5 @@
+/* Scss para index */
+
 .gridAreaIndex{
     display: grid;
     grid-template-areas:
@@ -27,6 +29,7 @@
         position: relative;
         z-index: 11;
         width: 45%;
+        max-width: 800px;
         padding: 25px;
         margin-left: 50px;
         margin-bottom: 100px;
@@ -50,6 +53,7 @@
     display: inline-block;
     z-index: 10;
     width: 40%;
+    max-width: 800px;
 }
 
 #nuestros_servicios{
@@ -107,7 +111,7 @@ $coloresTexto:(
 }
 
 
-/* estilo para Faq Mixing y Extend */
+/* estilo para contacto.html con Mixing y Extend */
 
 .cuerpoContacto{
     grid-area: Contenido;
@@ -127,7 +131,7 @@ $coloresTexto:(
     width: 70%;
 }
 .contactForm{
-    width: 80%; 
+    width: 80%;
     height: auto;
     margin: 40px 10%;
     border-radius: 10px;  

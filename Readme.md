@@ -1,13 +1,9 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: 3ra Preentrega
+###Cambios: Entrega Final.
 
-*se cargan imagenes definitivas al index y a la seccion productos.
+*Se arma formulario contacto desde 0 con bootstrap
 
-*se modifica spacing en pagina productos.
+*Se agregan animaciones al index y a la pagina de productos.
 
-*se modifica back en pagina contacto.
-
-*Se cargan items y textos definitivos a seccion de index
-
-*se genera footer definitivo
+*bug fix en diferentes paginas.

@@ -33,6 +33,7 @@ text-decoration: none;
 }
 
 
+
 /* estilo nav */
 
 .boxHeader{
@@ -43,6 +44,7 @@ text-decoration: none;
 
 .menu{
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 
@@ -64,10 +66,9 @@ text-decoration: none;
     background: linear-gradient(to bottom, rgb(129, 222, 245), rgb(32, 104, 212));
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100px;
     justify-content: space-evenly;
     position: relative;
-    bottom: 0;
 }
 
 
@@ -95,7 +96,11 @@ text-decoration: none;
     height: 75%;
 }
 
-/* -------------estilo index.html y Contacto.html------------- */  /* Se incluyen en el Scss */
+.color--textoCuerpo{
+    color: #2002cd;
+}
+
+/* -------------estilo index.html y Contacto.html------------- */  /* Se incluyen en el index.Scss */
 
 
 
@@ -111,7 +116,7 @@ text-decoration: none;
 
 /* -------------estilo tratamiento.html------------- */
 
-#cuerpoTratamiento{
+.cuerpoTratamiento{
     grid-area: Contenido;
     margin: 20px;
     padding: 20px;
@@ -124,12 +129,15 @@ text-decoration: none;
     align-content: center;
 }
 
+
+
 .tratamientoItem{
     width: 50%;
     margin-left: 15px;
     margin-right: 15px;
     padding-left: 20px;
     padding-right: 20px;
+    max-width: 800px;
 }
 
 /*  -------------estilo zonas_entrega.html------------- */
@@ -155,6 +163,7 @@ text-decoration: none;
     margin-right: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    max-width: 800px;
 }
 
 /*  -------------estilo FAQ.html------------- */
@@ -164,9 +173,6 @@ text-decoration: none;
     width: 80%;
     margin: 30px 10%;
     padding: 20px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 
 .encabezado h1{
@@ -248,15 +254,15 @@ text-decoration: none;
         width: 70%;
     }
     #nuestros_servicios{
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 }
 
 
 
 @media (max-width: 1024px){   /* media query contenido Tratamiento */
-    #cuerpoTratamiento{
+    .cuerpoTratamiento{
         display: block;
         margin: 0;
         padding-top: 0;

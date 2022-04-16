@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f2305ed6d7.js" crossorigin="anonymous"></script>
 </head>
@@ -165,7 +166,44 @@
             </div>
         </div>
     </div>
+
+    <!--Calculador de consumo  -->
+    <div class="container mb-5">
+        <div class="contactForm mb-5" data-aos="fade-up">
+            <div>
+                <h3 class="titulo color--tituloCuerpo my-4">Calcula tu consumo de agua semanal</h3>
+            </div>
+            <div>
+                <h5 class="titulo color--tituloCuerpo mb-5">Ingresa la cantidad de personas correspondientes:</h5>
+            </div>
+            
+            <div class="form-floating ms-5 mb-5 col-5">
+                <input type="number" class="form-control" id="personasMayores" placeholder="Personas mayores">
+                <label for="floatingInput">Personas mayores de edad</label>
+            </div>
+            <div class="form-floating ms-5 mb-5 col-5">
+                <input type="number" class="form-control" id="personasMenores" placeholder="Personas menores">
+                <label for="floatingInput">Personas menores de edad</label>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="enviarPersonas">Calcular consumo</button>
+            </div>
+        </div>
+    </div>
+    <!-- popUp consumo -->
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <div class="contenedor-inputs">
+                    <p class="textoPopUp" id="infoBidones20L"> bidondes 20</p>
+                    <p class="textoPopUp" id="infoBidones12L"> bidondes 20</p>
+                </div>
+        </div>
+    </div>
+
     </section>
+
+
 
     <footer id="pieDePagina">  <!--inicio footer -->
         <div class="itemPie">
@@ -197,5 +235,6 @@
     <script>
         AOS.init();
     </script>
+    <script src="./JS/funcionesJS.js"></script>
 </body>
 </html>

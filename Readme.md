@@ -1,9 +1,5 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: Entrega Final.
+###Cambios: 2da preentrega proyecto JS
 
-*Se arma formulario contacto desde 0 con bootstrap
-
-*Se agregan animaciones al index y a la pagina de productos.
-
-*bug fix en diferentes paginas.
+*se integra proceso de calcular consumo al index

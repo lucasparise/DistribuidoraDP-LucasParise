@@ -199,6 +199,12 @@ text-decoration: none;
     justify-content: center;
 }
 
+.linkCarrito{
+    display:scroll; 
+    position:fixed; 
+    bottom:0px; 
+    right:0px;
+}
 
 /* media Query */
 

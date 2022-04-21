@@ -202,7 +202,7 @@ text-decoration: none;
 .linkCarrito{
     display:scroll; 
     position:fixed; 
-    bottom:0px; 
+    bottom:7rem; 
     right:0px;
 }
 

@@ -25,17 +25,17 @@ listaProductos.push(new Producto(3, "Abono Frio/Calor + Botellón 20Lts.", "Abon
 
 listaProductos.push(new Producto(4, "Botellón 20Lts.", "Entrega unicamente de botellón.", 200,"../Img/bidon12L.png"));
 
-listaProductos.push(new Producto(4, "Botellón 12Lts.", "Entrega unicamente de botellón.", 300,"../Img/bidon20L.png"));
+listaProductos.push(new Producto(5, "Botellón 12Lts.", "Entrega unicamente de botellón.", 300,"../Img/bidon20L.png"));
 
-listaProductos.push(new Producto(5, "Botellón 12Lts. -Sodio", "Botellon de 12Lts bajo en sodio.", 270,"../Img/bidonsodio.png"));
+listaProductos.push(new Producto(6, "Botellón 12Lts. -Sodio", "Botellon de 12Lts bajo en sodio.", 270,"../Img/bidonsodio.png"));
 
-listaProductos.push(new Producto(6, "Sifón 1.5Lts.", "Sifon de soda retornable de 1.5Lts.", 50,"../Img/SifonSoda.png"));
+listaProductos.push(new Producto(7, "Sifón 1.5Lts.", "Sifon de soda retornable de 1.5Lts.", 50,"../Img/SifonSoda.png"));
 
-listaProductos.push(new Producto(6, "Sifón 1/2Lts. (solo bares)", "Sifon de soda retornable de 1/2Lts. Entrega unicamente a bares y restoranes.", 50,"../Img/sifonBar.png"));
+listaProductos.push(new Producto(8, "Sifón 1/2Lts. (solo bares)", "Sifon de soda retornable de 1/2Lts. Entrega unicamente a bares y restoranes.", 50,"../Img/sifonBar.png"));
 
-listaProductos.push(new Producto(6, "Dispenser automático recargable", "Bomba Dispenser de agua para bidones con batería interna Recargable por Usb.", 2000,"../Img/DispenserBomba2.jpg"));
+listaProductos.push(new Producto(9, "Dispenser automático recargable", "Bomba Dispenser de agua para bidones con batería interna Recargable por Usb.", 2000,"../Img/DispenserBomba2.jpg"));
 
-localStorage.setItem('listadoProductos', listaProductos);
+localStorage.setItem('listadoProductos', JSON.stringify(listaProductos));
 
 /* renderizado de productos en HTML */
 
@@ -114,33 +114,23 @@ function renderizarProductos() {
 
 renderizarProductos();
 
+/* verifico si hay productos en el carrito en memoria */
 
-/* interaccion con carrito */
+let carritoEnMemoria = localStorage.getItem('listadoCarrito');
+carritoEnMemoria = JSON.parse(carritoEnMemoria);
 
 let carrito = [];
-const DOMcarrito = document.querySelector('#carrito');
-const DOMtotal = document.querySelector('#total');
-const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 
-function agregarAlCarrito(evento) {
-    /* sumar producto a carrito */
-    carrito.push(evento.target.getAttribute('marcador'))
-    localStorage.setItem('listadoCarrito', carrito);
+if (carritoEnMemoria.length>0){
+    carrito = carritoEnMemoria;
 }
 
 
 
+/* interaccion con carrito */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+function agregarAlCarrito(evento) {
+    /* sumar producto a carrito */
+    carrito.push(evento.target.getAttribute('marcador'))
+    localStorage.setItem('listadoCarrito', JSON.stringify(carrito));
+}

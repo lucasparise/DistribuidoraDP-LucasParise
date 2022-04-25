@@ -93,6 +93,7 @@ function renderizarProductos() {
         botonAgregar.textContent = 'Agregar al carrito';
         botonAgregar.setAttribute('marcador', item.id);
         botonAgregar.addEventListener('click', agregarAlCarrito);
+        botonAgregar.addEventListener('click', notificacionAgregarProducto);
 
 
         /* dependencia de nodos */
@@ -123,6 +124,14 @@ let carrito = [];
 
 if (carritoEnMemoria.length>0){
     carrito = carritoEnMemoria;
+}
+
+function notificacionAgregarProducto(){
+    Toastify({
+        text: "Agregado al carrito",
+        duration: 3000
+    }).showToast();
+
 }
 
 

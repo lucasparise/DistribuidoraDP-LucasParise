@@ -9,8 +9,11 @@ const DOMcarrito = document.querySelector('#carritoCompra');
 const DOMcontador = document.querySelector('#contador');
 const DOMtotal = document.querySelector('#precioTotal');
 const DOMbotonVaciar = document.querySelector('#botonVaciar');
-DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+DOMbotonVaciar.addEventListener('click', popUpconfirmarVaciar);
+const DOMbotonFinalizarCompra = document.querySelector('#finalizarCompra');
+DOMbotonFinalizarCompra.addEventListener('click', popUpFinalizarCompra);
 let contador;
+
 
 /* renderizado de los productos en el carrito */
 
@@ -20,7 +23,7 @@ function renderizarCarrito() {
     /* eliminar duplicados de carrito */
     const carritoSinDuplicados = [...new Set(listacarrito)];
     carritoSinDuplicados.forEach((item) => {
-        let miItem = listaProductos.filter((itemBaseDatos) => {
+        let itemCarrito = listaProductos.filter((itemBaseDatos) => {
             return itemBaseDatos.id === parseInt(item);
         });
         
@@ -29,43 +32,43 @@ function renderizarCarrito() {
         }, 0);
 
         /* nodos del carrito */
-        const miNodo = document.createElement('li');
-        miNodo.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm');
+        const nodoItemCarrito = document.createElement('li');
+        nodoItemCarrito.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'lh-sm');
 
         const divTexto = document.createElement('div');
         divTexto.classList.add('flex-grow-1');
 
         const tituloItem = document.createElement('h6');
         tituloItem.classList.add('my-0');
-        tituloItem.textContent = `${numeroUnidadesItem} x ${miItem[0].nombreProducto}`;
+        tituloItem.textContent = `${numeroUnidadesItem} x ${itemCarrito[0].nombreProducto}`;
 
         const descItem = document.createElement('small');
         descItem.classList.add('text-muted');
-        descItem.textContent = miItem[0].descripcionProducto;
+        descItem.textContent = itemCarrito[0].descripcionProducto;
 
-        let precioSubtotal = parseInt(numeroUnidadesItem) * parseInt(miItem[0].precio);
+        let precioSubtotal = parseInt(numeroUnidadesItem) * parseInt(itemCarrito[0].precio);
 
         const precioItem = document.createElement('span');
         precioItem.classList.add('text-muted');
         precioItem.textContent = "$" + precioSubtotal;
 
         /* Boton de borrar */
-        const miBoton = document.createElement('button');
-        miBoton.classList.add('btn', 'btn-danger', 'me-4');
-        miBoton.textContent = 'X';
-        miBoton.style.height = '2.5rem';
-        miBoton.dataset.item = item;
+        const botonBorrarProducto = document.createElement('button');
+        botonBorrarProducto.classList.add('btn', 'btn-danger', 'me-4');
+        botonBorrarProducto.textContent = 'X';
+        botonBorrarProducto.style.height = '2.5rem';
+        botonBorrarProducto.dataset.item = item;
 
-        miBoton.addEventListener('click', borrarItemCarrito);
+        botonBorrarProducto.addEventListener('click', borrarItemCarrito);
 
             /* dependencia de nodos */
 
-        DOMcarrito.appendChild(miNodo);
-        miNodo.appendChild(miBoton);
-        miNodo.appendChild(divTexto);
+        DOMcarrito.appendChild(nodoItemCarrito);
+        nodoItemCarrito.appendChild(botonBorrarProducto);
+        nodoItemCarrito.appendChild(divTexto);
         divTexto.appendChild(tituloItem);
         divTexto.appendChild(descItem);
-        miNodo.appendChild(precioItem);
+        nodoItemCarrito.appendChild(precioItem);
         
         });
             /* calculo precio total y el contador */
@@ -85,23 +88,92 @@ function borrarItemCarrito(evento) {
     renderizarCarrito();
 }
 
-/* funcion vaciar carrito */
+/* funciones confirmar y vaciar carrito */
+
+function popUpconfirmarVaciar(){
+    if (listacarrito.length === 0){
+        popUpCarritoVacio();
+    }
+    else{
+        Swal.fire({
+            icon: 'warning',
+            iconColor: '#bf0202',
+            title: 'Desea vaciar el carrito?',
+            confirmButtonColor: '#bf0202',
+            showCancelButton: true,
+            confirmButtonText: 'Si, vaciar',
+            cancelButtonText: `Cancelar`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                vaciarCarrito();
+            }
+        })
+    }
+}
+
+
 function vaciarCarrito() {
     listacarrito = [];
     renderizarCarrito();
     localStorage.setItem('listadoCarrito', JSON.stringify(listacarrito));
 }
 
+
 /* funcion calcular total */
 function calcularTotal() {
     
     return listacarrito.reduce((total, item) => {
-        const miItem = listaProductos.filter((itemProductos) => {
+        const itemCarrito = listaProductos.filter((itemProductos) => {
             return itemProductos.id === parseInt(item);
         });
-        return total + miItem[0].precio;
+        return total + itemCarrito[0].precio;
     }, 0);
 }
 
+/* funcion finalizar compra */
+
+function popUpFinalizarCompra(){
+    if (listacarrito.length === 0){
+        popUpCarritoVacio();
+    }
+    else{
+        Swal.fire({
+            icon: 'warning',
+            iconColor: '#1ea300',
+            title: 'Desea finalizar su compra?',
+            confirmButtonColor: '#1ea300',
+            showCancelButton: true,
+            confirmButtonText: 'Si, finalizar',
+            cancelButtonText: `Seguir comprando`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                vaciarCarrito();
+                popUpCompraFinalizada();
+            }
+        })
+    }
+}
+
+function popUpCompraFinalizada(){
+    Swal.fire({
+        icon: 'success',
+        iconColor: '#1ea300',
+        title: 'Su compra ha sido procesada',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
+/* pop up error carrito vacio */
+
+function popUpCarritoVacio(){
+    Swal.fire({
+        icon: 'error',
+        iconColor: '#bf0202',
+        title: 'Su carrito esta vacio',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
 
 renderizarCarrito();

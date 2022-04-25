@@ -57,29 +57,17 @@ function calculadorDeconsumo(cantPersonasMayores, cantPersonasMenores){
 /* ---interaccion con HTML--- */
 
 let botonConsumo = document.getElementById("enviarPersonas");
-let overlay = document.getElementById('overlay');
-let popup = document.getElementById('popup');
-let btnCerrarPopup = document.getElementById('btn-cerrar-popup');
-let texto20litros = document.getElementById('infoBidones20L');
-let texto12litros = document.getElementById('infoBidones12L');
+botonConsumo.addEventListener('click', popUpInfoConsumo);
 
-
-botonConsumo.onclick = () => {
-    
+function popUpInfoConsumo() {
     let inputMayores = document.getElementById("personasMayores").value;
     let inputMenores = document.getElementById("personasMenores").value;
     calculadorDeconsumo(inputMayores, inputMenores);
-    texto20litros.innerText = "Necesitaria " + bidones20LTotales + " bidones de 20Lts semanales, con un costo de $" + precio20LTotal;
-    texto12litros.innerText = "O necesitaria " + bidones12LTotales + " bidones de 12Lts semanales, con un costo de $" + precio12LTotal;
-    overlay.classList.add('active');
-	popup.classList.add('active');
+    Swal.fire({
+        icon: 'info',
+        text: "Necesitaria " + bidones20LTotales + " bidones de 20Lts semanales, con un costo de $" + precio20LTotal + " , o necesitaria " + bidones12LTotales + " bidones de 12Lts semanales, con un costo de $" + precio12LTotal,
+        
+    })
 }
-
-btnCerrarPopup.addEventListener('click', function(e){
-	e.preventDefault();
-	overlay.classList.remove('active');
-	popup.classList.remove('active');
-});
-
 
 /* ----------Fin proceso calcular consumo------- */

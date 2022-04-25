@@ -1,9 +1,13 @@
 #Distribuidora DP - Lucas Parise
 
-###Cambios: 2da preentrega proyecto JS //entrega clase 12
+###Cambios: entrega clase 13
 
-*se integra proceso de calcular consumo al index
+*Se implementan alertas al agregar productos al carrito.
 
-*se integra funcionalidad completa del carrito, por el momento solo se ingresa desde la pagina de productos al formulario del check out.
+*Se implementa validacion en el boton vaciar carrito, y confirmacion del usuario
 
-*to-do: alertas usando las librerias, cuando se agrega al carrito, confimacion al querrer borrar producto, vaciar carrito o finalizar compra.
+*Se impementa validacion en el boton finalizar compra, confirmacion del usuario y pop up de finalizacion, ademas de que se vacia el carrito al finalizar.
+
+*se cambian nombres de variables como miBoton, o miNodo para hacer mas claro el codigo.
+
+*To-Do, validacion de datos ingresados en formulario de entrega y en calculador de consumo.

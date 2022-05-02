@@ -8,11 +8,35 @@ listacarrito = JSON.parse(listacarrito);
 const DOMcarrito = document.querySelector('#carritoCompra');
 const DOMcontador = document.querySelector('#contador');
 const DOMtotal = document.querySelector('#precioTotal');
+
 const DOMbotonVaciar = document.querySelector('#botonVaciar');
 DOMbotonVaciar.addEventListener('click', popUpconfirmarVaciar);
+
 const DOMbotonFinalizarCompra = document.querySelector('#finalizarCompra');
-DOMbotonFinalizarCompra.addEventListener('click', popUpFinalizarCompra);
+
+
+/* Envio y validacion de formulario */
+
+$('#formularioEntrega').on('submit', function(event){
+    event.preventDefault();
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        else{
+            popUpFinalizarCompra();
+        }
+        form.classList.add('was-validated')
+        }, false)
+    })
+});
+
 let contador;
+let precioProductosTotal;
 
 
 /* renderizado de los productos en el carrito */
@@ -130,7 +154,36 @@ function calcularTotal() {
     }, 0);
 }
 
-/* funcion finalizar compra */
+/* pop up error carrito vacio */
+
+function popUpCarritoVacio(){
+    Swal.fire({
+        icon: 'error',
+        iconColor: '#bf0202',
+        title: 'Su carrito esta vacio',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
+/* popUp error al procesar pedido */
+
+function popUpErrorAlProcesar(){
+    Swal.fire({
+        icon: 'error',
+        iconColor: '#bf0202',
+        title: 'Error al procesar pedido, intente más tarde',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
+
+
+/* --proceso finalizar compra-- */
+
+
+/* popUp compra finalizada */
 
 function popUpFinalizarCompra(){
     if (listacarrito.length === 0){
@@ -147,8 +200,8 @@ function popUpFinalizarCompra(){
             cancelButtonText: `Seguir comprando`,
         }).then((result) => {
             if (result.isConfirmed) {
+                enviarFormularioEntrega();
                 vaciarCarrito();
-                popUpCompraFinalizada();
             }
         })
     }
@@ -164,16 +217,28 @@ function popUpCompraFinalizada(){
     })
 }
 
-/* pop up error carrito vacio */
 
-function popUpCarritoVacio(){
-    Swal.fire({
-        icon: 'error',
-        iconColor: '#bf0202',
-        title: 'Su carrito esta vacio',
-        showConfirmButton: false,
-        timer: 1500
-    })
+/* envio al mail de datos y carrito */
+
+
+function enviarFormularioEntrega() {
+    var formData = new FormData(formularioEntrega);
+    formData.append('service_id', 'service_ywj7tn9');
+    formData.append('template_id', 'template_rsbi9qs');
+    formData.append('user_id', 'xgFdWOHtWslrzDiK7');
+    formData.append('precioTotal', calcularTotal());
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false 
+    }).done(function() {
+        popUpCompraFinalizada();
+    }).fail(function(error) {
+        popUpErrorAlProcesar();
+    });
 }
+
 
 renderizarCarrito();

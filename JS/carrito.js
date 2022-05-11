@@ -98,6 +98,7 @@ function renderizarCarrito() {
             /* calculo precio total y el contador */
             DOMcontador.textContent = carritoSinDuplicados.length;
             DOMtotal.textContent = "$" + calcularTotal();
+            contador = carritoSinDuplicados.length;
 }
 
 /* funcion boton de borrar producto */
@@ -227,6 +228,7 @@ function enviarFormularioEntrega() {
     formData.append('template_id', 'template_rsbi9qs');
     formData.append('user_id', 'xgFdWOHtWslrzDiK7');
     formData.append('precioTotal', calcularTotal());
+    formData.append('cantItems', contador);
 
     $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
         type: 'POST',
